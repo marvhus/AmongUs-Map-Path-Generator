@@ -1,27 +1,31 @@
 import random
 import sys
 import json
+import os
 
-choice = ""
 rooms = json.loads(open('rooms.json').read())
 
-
-
+line = "--------------------"
 
 def AU() :
     #AU() START
-    print("What map do you want to learn? The_Skeld / Polus / MIRA_HQ  other commands map_links / Exit  (remember this is case sensitive)")
+    print(line)
+    print("What map do you want to learn? The_Skeld / Polus / MIRA_HQ")
+    print("other commands: maps / Exit  (remember this is case sensitive)")
+    print(line)
     cmd = input("")
     mapChosen = cmd
 
-    if cmds == "Change_Map" or cmd == "Exit" or cmd == "map_links" :
+    if cmds == "Change_Map" or cmd == "Exit" or cmd == "maps" :
         cmds(cmd)
 
     elif cmd == "The_Skeld" or cmd == "Polus" or cmd == "MIRA_HQ" :
         cmds2(mapChosen)
+
+    
+
+
     #AU() END
-
-
 
 def cmds(cmd) :
 
@@ -31,18 +35,14 @@ def cmds(cmd) :
     elif cmd == "Exit":
         sys.exit()
 
-    elif cmd == "map_links":
+    elif cmd == "maps":
 
-        print("--------------------------------------------------------------------------------------------------------------------------------------")
-        print("The Skeld: https://vignette.wikia.nocookie.net/among-us-wiki/images/4/4f/SKELD_MAP.jpg/revision/latest?cb=20200914210838")
-        print("--------------------------------------------------------------------------------------------------------------------------------------")
-        print("Polus: https://vignette.wikia.nocookie.net/among-us-wiki/images/4/4c/Polus.png/revision/latest?cb=20200907133344")
-        print("--------------------------------------------------------------------------------------------------------------------------------------")
-        print("MIRA HQ: https://vignette.wikia.nocookie.net/among-us-wiki/images/0/0a/Mirahq.png/revision/latest?cb=20200907132939")
-        print("--------------------------------------------------------------------------------------------------------------------------------------")
+        print(line)
+        print("In the images folder find the map for the map you are playing")
+        print(line)
+        print("Press enter to continue")
+        input()
         AU()
-
-
 
 def cmds2(mapChosen) :
 
@@ -66,8 +66,10 @@ def cmds2(mapChosen) :
         print("------")
         print("go to: ", rooms[num])
         print("------")
+   
 
-    input("Press enter to go to the next room")
+    print("Press enter to go to the next room")
+    input()
     cmds2(mapChosen)
 
 AU()

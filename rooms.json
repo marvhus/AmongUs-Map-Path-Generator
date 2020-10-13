@@ -1,4 +1,5 @@
 [
+
 "Upper Engine", 
 "Cafeteria", 
 "Weapons",
@@ -13,6 +14,7 @@
 "Admin",
 "Communications",
 "Shields",
+
 "Northwest",
 "Northeast",
 "Laboratory",
@@ -29,6 +31,7 @@
 "South",
 "Admin",
 "Specimen Room",
+
 "Greenhouse",
 "Office",
 "Admin",
@@ -41,4 +44,5 @@
 "torage",
 "afeteria",
 "balcony"
+
 ]
